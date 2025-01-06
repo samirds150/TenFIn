@@ -1,0 +1,13 @@
+# Ignore datasets folder
+backend/notebooks/datasets/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Node.js dependencies
+frontend/node_modules/

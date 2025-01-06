@@ -1,0 +1,150 @@
+/* nextpage.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nextpage-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #3b3b3b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .menu {
+    flex-grow: 1;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover,
+  .menu-item.active {
+    background-color: #575757;
+  }
+  
+  .user-guide {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* Main Content */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .header-options {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+  }
+  
+  .main-section {
+    flex: 1;
+  }
+  
+  .new-test {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .new-test p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .add-test {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #3b3b3b;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .add-test:hover {
+    background-color: #575757;
+  }
+  
+  .test-history {
+    margin-top: 20px;
+  }
+  
+  .test-history h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .test-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .test-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+  }
+  
+  .test-card h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  
+  .test-card p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+ 
+  
