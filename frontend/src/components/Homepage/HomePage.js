@@ -26,7 +26,7 @@ const NextPage = () => {
 
       <main className="content">
         <header className="header">
-          <h1>Welcome, {name}</h1> {/* Display the name dynamically */}
+          <h1>Welcome, {name}</h1>
           <div className="header-options">
             <div className="notification">Notification</div>
             <div className="account">Account</div>
