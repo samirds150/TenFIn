@@ -53,10 +53,6 @@ const NextPage = () => {
             </div>
           </div>
         </section>
-
-        <footer className="footer">
-          <button className="ask-to-edit">Ask to edit</button>
-        </footer>
       </main>
     </div>
   );

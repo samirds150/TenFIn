@@ -3,7 +3,7 @@
   color: white;
   background-color: black;
   min-height: 100vh;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 /* Logo and Heading */
@@ -40,21 +40,25 @@
 /* Image and Content Section */
 .tnc-content {
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   flex-wrap: wrap;
+  /* width: 1280px;
+  height: 613px; */
 }
 
 .tnc-content img {
   width: 534px;
   height: 565px;
-  object-fit: contain;
+  /* object-fit: contain; */
   margin-right: 20px;
+  /* top: 163px; */
+  position: relative;
 }
 
 .tnc-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 10px;
 }
 
@@ -62,7 +66,7 @@ h2 {
   font-weight: 400;
   font-size: 40px;
   line-height: 42px;
-  margin-top: 40px; /* Added margin-top to move the h2 down */
+  /* margin-top: 40px;  */
 }
 
 p {
@@ -70,7 +74,7 @@ p {
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
-  margin-top: 20px; /* Added margin-top to move the p down */
+  /* margin-top: 20px;  */
 }
 
 /* Button in .tnc-text */
