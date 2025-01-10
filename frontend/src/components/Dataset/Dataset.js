@@ -1,98 +1,58 @@
-// AddDatasetPage.js
-import React, { useState } from "react";
-import "./datasetpage.css";
+import React from 'react';
+import './datasetpage.css';
 
-const AddDatasetPage = () => {
-  const [datasets, setDatasets] = useState([
-    "Singapore Transaction Data",
-    "UK Transaction Data",
-    "Portfolio Optimization Data",
-    "Credit Assessment Data",
-  ]);
-  const [selectedDataset, setSelectedDataset] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleDatasetSelect = (dataset) => {
-    setSelectedDataset(dataset);
-  };
-
-  const handleAddDataset = () => {
-    const newDataset = prompt("Enter the name of the new dataset:");
-    if (newDataset) {
-      setDatasets([...datasets, newDataset]);
-    }
-  };
-
-  const filteredDatasets = datasets.filter((dataset) =>
-    dataset.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+const App = () => {
   return (
-    <div className="add-dataset-page">
-      <header className="header">
-        <div className="progress-bar">
-          <span className="step active">Add Dataset</span>
-          <span className="step">Select Model</span>
-          <span className="step">Execute Test</span>
-        </div>
-        <div className="header-options">
-          <div className="notification">Notification</div>
-          <div className="account">Account</div>
+    <div className="container">
+      {/* Header Section */}
+      <header>
+        <div className="header">
+          <span className="logo">Logo</span>
+          <div className="header-content">
+            <div className="content">Notification</div>
+            <div className="content">Account</div>
+          </div>
         </div>
       </header>
 
-      <div className="content">
-        <div className="dataset-section">
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button className="filter-button" onClick={handleAddDataset}>
-              + Add Dataset
-            </button>
-          </div>
-          <ul className="dataset-list">
-            {filteredDatasets.map((dataset, index) => (
-              <li
-                key={index}
-                className={
-                  selectedDataset === dataset ? "dataset-item selected" : "dataset-item"
-                }
-                onClick={() => handleDatasetSelect(dataset)}
-              >
-                {dataset}
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* Main Content Section */}
+      <div className="content-container">
+        <aside className="sidebar">
+          <nav>
+            <ul className="sidebar-content">
+              <li className="menu-item">Home</li>
+              <li className="menu-item active">Dataset</li>
+              <li className="menu-item">Models</li>
+            </ul>
+          </nav>
+        </aside>
 
-        <div className="preview-section">
-          <h3>Preview</h3>
-          <div className="preview-box">
-            {selectedDataset ? (
-              <p>{selectedDataset}</p>
-            ) : (
-              <p>Select a dataset to preview details</p>
-            )}
-          </div>
-        </div>
+        <main className="main-content">
+          <header className="main-content-header">
+            <div className="dataset-heading">
+              <h1>Datasets</h1>
+            </div>
+            <div className="dataset-search">
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search"
+                className="search-bar"
+              />
+              <button type="button" className="search-btn">i</button>
+              <label htmlFor="file-upload" className="custom-file-upload">
+                Upload CSV
+              </label>
+              <input type="file" id="file-upload" accept=".csv" />
+            </div>
+          </header>
+          <p>Upload, view, delete or manage all data</p>
+
+        </main>
       </div>
-
-      <footer className="footer">
-        <button className="cancel-button">Cancel</button>
-        <button
-          className="continue-button"
-          disabled={!selectedDataset}
-          onClick={() => alert(`Continuing with ${selectedDataset}`)}
-        >
-          Select & Continue
-        </button>
-      </footer>
     </div>
   );
 };
 
-export default AddDatasetPage;
+export default App;

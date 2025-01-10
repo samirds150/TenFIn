@@ -1,61 +1,57 @@
-import React from "react";
+import React from 'react';
+import hsbcLogo from "./download.png";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./homepage.css";
 
-const NextPage = () => {
+import './homepage.css';
+
+const App = () => {
   const location = useLocation();
-  const navigate = useNavigate()
-  const { name } = location.state || { name: "Guest" }; // Fallback to "Guest" if no name is provided
-  const handleAddTestClik = () => {
+  const navigate = useNavigate();
+
+  const handleAddTestClick = () => {
     navigate("/dataset");
-  }
-
+  };
   return (
-    <div className="nextpage-container">
-      <aside className="sidebar">
-        <div className="logo">LOGO</div>
-        <nav className="menu">
-          <ul>
-            <li className="menu-item active">Home</li>
-            <li className="menu-item active">Dataset</li>
-            <li className="menu-item active">Models</li>
-          </ul>
-        </nav>
-        <div className="user-guide">User Guide</div>
-      </aside>
-
-      <main className="content">
-        <header className="header">
-          <h1>Welcome, {name}</h1>
-          <div className="header-options">
-            <div className="notification">Notification</div>
-            <div className="account">Account</div>
+    <div className="container">
+      {/* Header Section */}
+      <header>
+        <div className="header">
+        <img src={hsbcLogo} alt="HSBC Logo" className="hsbc-logo" />
+          <div className="header-content">
+            <div className="content">Notification</div>
+            <div className="content">Account</div>
           </div>
-        </header>
+        </div>
+      </header>
 
-        <section className="main-section">
+      {/* Main Content Section */}
+      <div className="content-container">
+        <aside className="sidebar">
+          <nav>
+            <ul className="sidebar-content">
+              <li className="menu-item active">Home</li>
+              <li className="menu-item">Dataset</li>
+              <li className="menu-item">Models</li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main className="main-content">
+          <header className="main-header">
+            <h1>Welcome {location.state?.name|| "User"}</h1>
+          </header>
           <div className="new-test">
-            <p>Start a new test</p>
-            <div className="add-test" onClick={handleAddTestClik}>+</div>
+            <button className="add-test-btn" onClick={handleAddTestClick}>+ Start New Test</button>
           </div>
 
           <div className="test-history">
-            <h2>Test History</h2>
-            <div className="test-cards">
-              <div className="test-card">
-                <h3>Quantum Fraud Model</h3>
-                <p>Dataset: model.csv</p>
-              </div>
-              <div className="test-card">
-                <h3>Traditional Fraud Model</h3>
-                <p>Dataset: model.csv</p>
-              </div>
-            </div>
+            <h1>History</h1>
+            <p>All of your test history will appear here</p>
           </div>
-        </section>
-      </main>
+        </main>
+      </div>
     </div>
   );
 };
 
-export default NextPage;
+export default App;
