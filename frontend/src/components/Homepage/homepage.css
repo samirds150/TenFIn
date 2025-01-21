@@ -53,6 +53,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
 }
 
 .menu-item {
@@ -64,6 +65,8 @@ body {
 .menu-item.active {
   background-color: #040404;
   width: 252px;
+  border: 1px white dashed;
+  align-self: center;
 }
 
 .main-content {

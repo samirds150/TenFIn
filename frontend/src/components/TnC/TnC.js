@@ -51,7 +51,7 @@ const TnC = () => {
           )}
 
           <button 
-            className="tnc-button" 
+            className={`tnc-button ${currentStep === contentData.length - 1 ? 'right-aligned' : ''}`} 
             onClick={NextPage}
           >
             {currentStep === contentData.length - 1 ? "I agree" : "Next"}

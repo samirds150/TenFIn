@@ -95,3 +95,7 @@ p {
 .tnc-button:hover {
   background-color: #a8000b;
 }
+
+.tnc-button.right-aligned {
+  margin-left: auto;
+width: 90px}

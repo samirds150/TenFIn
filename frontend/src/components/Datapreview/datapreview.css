@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background-color: #040404;
+    color: aliceblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #12121E;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .content {
+    cursor: pointer;
+  }
+  
+  .content-container {
+    display: flex;
+    height: calc(100% - 60px);
+    margin-top: 15px;
+  }
+  
+  .sidebar {
+    width: 300px;
+    background-color: #12121E;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .sidebar-content {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    padding: 15px 76px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item.active {
+    background-color: #040404;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #040404;
+  }
+  
+  .main-header h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    width: 399px;
+    height: 60px;
+    top: 136px;
+    left: 340px;
+    position: absolute;
+  }
+  
+  .new-test {
+    border: 1px dashed #767676;
+    width: 267px;
+    height: 127px;
+    position: absolute;
+    left: 15px;
+    top: 228px;
+    left: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-test-btn {
+    background-color: #040404;
+    border-style: none;
+    color: aliceblue;
+    cursor: pointer;
+  }
+  
+  .test-history {
+    position: absolute;
+    top: 387px;
+    left: 340px;
+  }
+  
+  .main-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Hide the actual file input */
+  input[type="file"] {
+    display: none;
+  }
+  
+  /* Style the label to look like a button */
+  .custom-file-upload {
+    display: inline-block;
+    padding: 11px 20px;
+    color: white;
+    background-color: #db0011;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .dataset-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #494952;
+    flex-grow: 1;
+    color: #12121E;
+    background-color: #040404;
+    height: 40px;
+    width: 268px;
+  }
+  
+  .search-btn {
+    padding: 11px 20px;
+    background-color: #040404;
+    color: white;
+    border: 1px solid #494952;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 38px;
+    width: 38px;
+  }
+  
+  .search-btn:hover {
+    background-color: #12121E;
+  }
+  
